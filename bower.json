@@ -1,0 +1,8 @@
+{
+  "name": "yotest",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

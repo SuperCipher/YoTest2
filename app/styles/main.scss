@@ -1,0 +1,112 @@
+// bower:scss
+// endbower
+
+
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+
+$red: #FA1E64;
+
+@mixin contain() {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+
+  margin: 0;
+
+  .navtab {
+    background-color: #222;
+    -webkit-padding-start: 90px;
+
+    .navtab--mainmenus {
+
+      @include contain();
+
+      list-style-type: none;
+      margin: 0;
+      padding: 0px 15px;
+      overflow: hidden;
+      height: 75px;
+      line-height: 90px;
+
+      .navspan {
+
+        //padding: 0;
+
+        .navtab_li--mainmenus {
+
+          float: Right;
+          font-size: 1.2em;
+          font-weight: 400;
+
+          a {
+
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 5px 15px;
+            text-decoration: none;
+
+            &:hover {
+              background-color: #111;
+            }
+
+          }
+
+        }
+
+        #login {
+          color: $red;
+        }
+
+        #ul_li--icpic {
+          float: left;
+        }
+
+      }
+    }
+
+  }
+
+  .container {
+
+    @include contain();
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    .scoop {
+      float: left;
+      width: 16.66666667%;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      .scoop_header {
+        font-size: 1.375em;
+      }
+
+      .scoop_img {
+        .scoop_img--image{
+
+        height: 100%;
+        width: 100%;
+
+        }
+      }
+
+      .scoop_headline {
+        a {
+
+          line-height: 1.42857143;
+          text-decoration: none;
+          color: $red;
+
+        }
+      }
+
+    }
+
+  }
+}
