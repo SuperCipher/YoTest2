@@ -1,112 +1,138 @@
 // bower:scss
 // endbower
 
-
 $fa-font-path: "../../bower_components/font-awesome/fonts";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 
-
 $red: #FA1E64;
+$facebookBlue: #3B5998;
+$twitterBlue:#55acee;
+$googleRed:#dd4b39;
 
-@mixin contain() {
+@mixin social-modifier($backgroundColor) {
+  background-color: $backgroundColor;
+  font-size: 2em;
+  width: 110px;
+  height: 37px;
+  //padding: .05em;
+  //margin-right: 0px;
+  //margin-left:0px;
+  //border: 0px 0px;
+  text-align: center;
+  //box-sizing: border-box;
+  display: inline-block;
+  color: #fff;
+  //display: inline-block;
+}
+
+
+
+.contain {
   width: 1170px;
   margin-right: auto;
   margin-left: auto;
 }
 
-body {
+.body {
 
   margin: 0;
+}
 
-  .navtab {
-    background-color: #222;
-    -webkit-padding-start: 90px;
+.navigation-tab {
+  background-color: #222;
+  //-webkit-padding-start: 90px;
+}
 
-    .navtab--mainmenus {
+.navigation-tab--main-menus {
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0px 15px;
+  overflow: hidden;
+  height: 75px;
+  line-height: 90px;
 
-      @include contain();
+  &_menu {
+    list-style: none;
+    float: Right;
+    font-size: 17px;
 
-      list-style-type: none;
-      margin: 0;
-      padding: 0px 15px;
-      overflow: hidden;
-      height: 75px;
-      line-height: 90px;
-
-      .navspan {
-
-        //padding: 0;
-
-        .navtab_li--mainmenus {
-
-          float: Right;
-          font-size: 1.2em;
-          font-weight: 400;
-
-          a {
-
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 5px 15px;
-            text-decoration: none;
-
-            &:hover {
-              background-color: #111;
-            }
-
-          }
-
-        }
-
-        #login {
-          color: $red;
-        }
-
-        #ul_li--icpic {
-          float: left;
-        }
-
-      }
+    padding: 5px 15px;
+    &:hover {
+      background-color: #111;
     }
 
   }
 
-  .container {
+  > .login {
+    //color: $red;
+  }
 
-    @include contain();
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  > .iconpic {
+    float: left;
+  }
 
-    .scoop {
-      float: left;
-      width: 16.66666667%;
-      padding-right: 15px;
-      padding-left: 15px;
+}
 
-      .scoop_header {
-        font-size: 1.375em;
-      }
+a {
 
-      .scoop_img {
-        .scoop_img--image{
+  display: block;
+  color: white;
+  text-align: left;
+  text-decoration: none;
 
-        height: 100%;
-        width: 100%;
+}
 
-        }
-      }
+.container {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-      .scoop_headline {
-        a {
+}
 
-          line-height: 1.42857143;
-          text-decoration: none;
-          color: $red;
+.scoop {
+  float: left;
+  width: 15.66666667%;
+  padding-right: 15px;
+  padding-left: 15px;
 
-        }
-      }
 
-    }
+}
+
+.scoop_header {
+  font-size: 1.375em;
+}
+
+.yellow-border-bottom{
+  border-bottom: #FFC025 8px solid;
+}
+
+.scoop_img {
+  &--image {
+    height: 100%;
+    width: 100%;
 
   }
 }
+
+.scoop_headline {
+  a {
+
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: $red;
+
+  }
+}
+
+.face-book{
+@include social-modifier($facebookBlue)
+}
+
+.twitter{
+  @include social-modifier($twitterBlue)
+}
+
+
+
+.google{
+  @include social-modifier($googleRed)
+}
+
