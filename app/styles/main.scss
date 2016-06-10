@@ -1,112 +1,179 @@
 // bower:scss
 // endbower
 
-
 $fa-font-path: "../../bower_components/font-awesome/fonts";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 
-
 $red: #FA1E64;
+$facebookBlue: #3B5998;
+$twitterBlue: #55acee;
+$googleRed: #dd4b39;
 
-@mixin contain() {
-  width: 1170px;
-  margin-right: auto;
-  margin-left: auto;
+@mixin social-modifier($backgroundColor) {
+  background-color: $backgroundColor;
+  font-size: 2em;
+  width: 110px;
+  height: 37px;
+  margin-right: -5px;
+  margin-left: 0px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
 }
 
-body {
+.body {
 
   margin: 0;
+}
 
-  .navtab {
-    background-color: #222;
-    -webkit-padding-start: 90px;
+.navigation-tab {
+  background-color: #222;
+  //-webkit-padding-start: 90px;
+}
 
-    .navtab--mainmenus {
+.navigation-tab--main-menus {
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0px;
+  padding-right: 5%;
+  overflow: hidden;
+  height: 75px;
+  line-height: 90px;
 
-      @include contain();
+  &_menu {
+    list-style: none;
+    float: Right;
+    font-size: 17px;
 
-      list-style-type: none;
-      margin: 0;
-      padding: 0px 15px;
-      overflow: hidden;
-      height: 75px;
-      line-height: 90px;
-
-      .navspan {
-
-        //padding: 0;
-
-        .navtab_li--mainmenus {
-
-          float: Right;
-          font-size: 1.2em;
-          font-weight: 400;
-
-          a {
-
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 5px 15px;
-            text-decoration: none;
-
-            &:hover {
-              background-color: #111;
-            }
-
-          }
-
-        }
-
-        #login {
-          color: $red;
-        }
-
-        #ul_li--icpic {
-          float: left;
-        }
-
-      }
+    padding: 5px 15px;
+    &:hover {
+      background-color: #111;
     }
 
   }
 
-  .container {
+  .login {
+    color: $red;
+    text-decoration: none;
+  }
 
-    @include contain();
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  .icon-pic {
+    float: left;
+    padding: 5px 15px;
+  }
 
-    .scoop {
-      float: left;
-      width: 16.66666667%;
-      padding-right: 15px;
-      padding-left: 15px;
+}
 
-      .scoop_header {
-        font-size: 1.375em;
-      }
+.navigation-test {
+  //display: block;
+  color: white;
+  text-align: left;
+  text-decoration: none;
 
-      .scoop_img {
-        .scoop_img--image{
+}
 
-        height: 100%;
-        width: 100%;
+.contain {
+  width: 90%;
+  margin-right: 7%;
+  margin-left: 7%;
+}
 
-        }
-      }
+.container {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-      .scoop_headline {
-        a {
+}
 
-          line-height: 1.42857143;
-          text-decoration: none;
-          color: $red;
+.scoop {
+  float: left;
+  width: 14%;
+  //padding-right: 15px;
+  //padding-left: 15px;
+}
 
-        }
-      }
+.scoop_header {
+  font-size: 1.21em;
+  p {
+    margin-top: 0px;
+    margin-bottom: 9px;
+  }
+}
 
-    }
+.scoop_img {
+  &--image {
+    height: 100%;
+    width: 100%;
 
   }
+}
+
+.scoop_headline {
+  a {
+    width: 90%;
+    line-height: 135%;
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+.content-header {
+  font-size: 35px;
+  line-height: 125%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.gray-border-bottom {
+  border-bottom: #f1f1f1 8px solid;
+  margin: 15px 0;
+}
+
+.yellow-border-bottom {
+  border-bottom: #FFC025 8px solid;
+}
+
+.date-time {
+  color: rgba(0, 0, 0, .4);
+  p {
+    padding: 5px 0;
+    display: inline;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+.center-content {
+  float: left;
+  //display: block;
+  width: 54%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.face-book {
+  @include social-modifier($facebookBlue)
+}
+
+.twitter {
+  @include social-modifier($twitterBlue)
+}
+
+.google {
+  @include social-modifier($googleRed)
+}
+
+.featured-content {
+  display: block;
+  &--image {
+    width: 100%;
+  }
+}
+
+.widget {
+  float: left;
+  padding-right: 15px;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
 }
